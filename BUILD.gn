@@ -10,6 +10,11 @@ copy("assets") {
     "plane.obj",
     "wolf.obj",
 
+    "basecolor.png",
+    "metallic.png",
+    "normal.png",
+    "roughness.png",
+
     "UbuntuMono-Regular.ttf",
   ]
 
