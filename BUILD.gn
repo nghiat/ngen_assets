@@ -15,6 +15,13 @@ copy("assets") {
     "normal.png",
     "roughness.png",
 
+    "negx.png",
+    "negy.png",
+    "negz.png",
+    "posx.png",
+    "posy.png",
+    "posz.png",
+
     "UbuntuMono-Regular.ttf",
   ]
 
