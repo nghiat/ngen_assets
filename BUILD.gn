@@ -4,12 +4,32 @@
 ## Copyright (C) Tran Tuan Nghia <trantuannghia95@gmail.com> 2022             ##
 ##----------------------------------------------------------------------------##
 
-copy("assets") {
+import("//core/gpu/texture.gni")
+
+group("assets") {
+  deps = [
+    ":misc",
+    ":texture",
+  ]
+}
+
+copy("misc") {
   sources = [
     "cube.obj",
     "plane.obj",
     "wolf.obj",
 
+    "UbuntuMono-Regular.ttf",
+  ]
+
+  outputs = [
+    "$root_out_dir/assets/{{source_file_part}}"
+  ]
+}
+
+texture("texture") {
+  format = "BC7"
+  sources = [
     "basecolor.png",
     "metallic.png",
     "normal.png",
@@ -21,11 +41,5 @@ copy("assets") {
     "posx.png",
     "posy.png",
     "posz.png",
-
-    "UbuntuMono-Regular.ttf",
-  ]
-
-  outputs = [
-    "$root_out_dir/assets/{{source_file_part}}"
   ]
 }
