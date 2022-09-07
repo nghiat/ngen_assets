@@ -17,6 +17,7 @@ copy("misc") {
   sources = [
     "cube.obj",
     "plane.obj",
+    "wolf.dae",
     "wolf.obj",
 
     "UbuntuMono-Regular.ttf",
